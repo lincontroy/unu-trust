@@ -339,9 +339,9 @@
                   <div class="main-header__menu-box">
                      <nav class="navbar p-0">
                         <div class="navbar-logo">
-                           <a href="index.html">
+                           <a href="">
                               <!-- UNU-Trust Logo Placeholder -->
-                              <img src="images/logo.png" alt="UNU-Trust Logo">
+                              <img src="logo.png" alt="UNU-Trust Logo" width="200px" height="200px">
                            </a>
                         </div>
                         <div class="navbar__menu-wrapper">
@@ -680,7 +680,7 @@
                   <div class="footer-two__widget" data-aos="fade-up" data-aos-duration="1000">
                      <div class="footer-two__widget-logo">
                         <a href="index.html">
-                           <img src="images/logo-light.png" alt="UNU-Trust Logo">
+                           <img src="logo.png" alt="UNU-Trust Logo">
                         </a>
                      </div>
                      <div class="footer-two__widget-content">
@@ -739,7 +739,7 @@
                         <ul>
                            <li><a href="#"><i class="fa-solid fa-location-dot"></i>Northern Kenya Office</a></li>
                            <li><a href="tel:+254-XXX-XXXX"><i class="fa-solid fa-phone"></i>+254 XXX XXXX</a></li>
-                           <li><a href="mailto:info@unutrust.org"><i class="fa-regular fa-envelope"></i>info@unutrust.org</a></li>
+                           <li><a href="mailto:info@unu-trust.org"><i class="fa-regular fa-envelope"></i>info@unu-trust.org</a></li>
                         </ul>
                      </div>
                   </div>
