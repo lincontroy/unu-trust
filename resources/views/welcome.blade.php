@@ -283,8 +283,7 @@
    <div class="page-wrapper">
       <!-- ==== preloader start ==== -->
       <div class="preloader">
-         <i class="icon-donation"></i>
-         <p>UNU-TRUST</p>
+        <img src="logo.png" alt="UNU-Trust Logo" width="200px" height="200px">
       </div>
       <!-- ==== / preloader end ==== -->
       
