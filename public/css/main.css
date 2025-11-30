@@ -2698,9 +2698,9 @@ div {
   z-index: 99;
 }
 .header .main-header__menu-box {
-  padding-top: 27px;
-  padding-bottom: 27px;
-  position: relative;
+  padding-top: 37px;
+  padding-bottom: 17px;
+  /* position: ; */
   background-color: var(--white);
 }
 .header .navbar {
@@ -2708,7 +2708,7 @@ div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
+      -ms-flex-align: center; 
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -2718,8 +2718,8 @@ div {
       flex-wrap: wrap;
 }
 .header .navbar-logo img {
-  max-width: 160px;
-  height: 36px;
+  max-width: 100px;
+  height: 70px;
 }
 .header .navbar__menu {
   -webkit-box-flex: 1;
