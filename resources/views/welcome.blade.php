@@ -242,10 +242,23 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
-                    <div class="arid-image-container" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="arid.png" alt="Arid regions of Kenya" class="arid-image">
-                    </div>
-                    
+                    <div class="arid-image-container" 
+                    data-aos="fade-up" 
+                    data-aos-duration="1000"
+                    style="width:100%; max-width:100%; display:flex; justify-content:center;">
+               
+                   <img src="arid.png" 
+                        alt="Arid regions of Kenya" 
+                        class="arid-image"
+                        style="
+                           width:100%;
+                           height:auto;
+                           max-width:600px;        /* prevents image from being too large on big screens */
+                           display:block;
+                           border-radius:8px;      /* optional nice rounded corners */
+                        ">
+               </div>
+               
                     <div class="counties-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                         <div class="counties-group current-counties">
                             <h3 class="counties-title">
