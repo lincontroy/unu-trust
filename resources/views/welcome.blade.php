@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- ==== banner section start ==== -->
-<section class="banner-two pt-0">
+<section class="banner-two pt-0" style="margin-top: 0px !important;">
     <div class="banner-two__slider swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="col-12 col-md-9 col-lg-7 col-xxl-6">
                                 <div class="banner-two__slider-content">
-                                    <span class="sub-title"><i class="icon-donation"></i>Empowering Women in Northern Kenya</span>
+                                    <span class="sub-title" style="color: white !important;"><i class="icon-donation"></i>Empowering Women in Northern Kenya</span>
                                     <h1>Transforming Poverty Into <span class="bottom-line">Prosperity</span> Through Innovation</h1>
                                     <div class="banner__content-cta cta">
                                         <a href="/solution" aria-label="about us" title="about us" class="btn--tertiary">Our Solution <i class="fa-solid fa-arrow-right"></i></a>
@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-12 col-md-9 col-lg-7 col-xxl-6">
                                 <div class="banner-two__slider-content">
-                                    <span class="sub-title"><i class="icon-donation"></i>Transforming Arid and Semi-Arid Communities</span>
+                                    <span class="sub-title" style="color: white !important;"><i class="icon-donation"></i>Transforming Arid and Semi-Arid Communities</span>
                                     <h1>Transforming Poverty Into <span class="bottom-line">Bridging exclusion gaps in equality</span> Through Rights accessibility</h1>
                                     <div class="banner__content-cta cta">
                                         <a href="/solution" aria-label="about us" title="about us" class="btn--tertiary">Our Strategy <i class="fa-solid fa-arrow-right"></i></a>

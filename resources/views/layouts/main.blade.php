@@ -73,12 +73,15 @@
             z-index: 9999;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             height: auto; /* remove fixed height */
-            padding: 0px 0; /* minimal top/bottom padding */
+            padding: 4px 0;
         }
         
         .header .container {
-            padding: 0 10px; /* minimal horizontal padding */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 10px; 
         }
+
         .main-header__menu-box {
             padding: 10px 0;
         }
@@ -88,12 +91,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 12px;
+           
         }
         
         /* Increased Logo Size */
         .navbar-logo img {
-            height: 170px;
+            height: 110px;
             max-width: 220px;
             margin: -5px 0; /* Negative margin to compensate */
         }
@@ -123,7 +127,7 @@
             color: #333 !important; /* FIXED: Changed from white to dark for visibility */
             font-weight: 500;
             font-size: 13px;
-            padding: 6px 6px;
+            padding: 6px 8px; /* small + compact */
             display: block;
             transition: color 0.3s ease;
             white-space: nowrap;
@@ -843,166 +847,6 @@
         }
    </style>
 
-<!-- Add this CDN in the head section -->
-
-
-<!-- Add this AFTER all your existing <style> tags in main.blade.php <head> -->
-<!-- This overrides the old conflicting styles -->
-
-<style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        line-height: 1.6;
-    }
-   
-    
-
-    
-    .navbar-logo img {
-        height: 170px;
-        width: auto;
-    }
-    
-    /* Desktop Menu */
-    .navbar__menu-wrapper { display: flex; }
-
-    .navbar__item a {
-        text-decoration: none;
-        color: #333;
-        font-size: 14px;
-        padding: 5px 8px;
-        display: block;
-    }
-    
-    /* Dropdown */
-    .navbar__item--has-children { position: relative; }
-    .navbar__sub-menu {
-        position: absolute;
-        left: 0;
-        top: 110%;
-        background: #fff;
-        min-width: 160px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        opacity: 0; visibility: hidden;
-        transition: .3s ease;
-    }
-    .navbar__item--has-children:hover .navbar__sub-menu {
-        opacity: 1; visibility: visible;
-    }
-    .navbar__sub-menu a {
-        padding: 10px 15px;
-        color: #333;
-    }
-    
-    /* Desktop Contact button */
-    .btn--primary {
-        background: #2a7de1;
-        color: #fff !important;
-        padding: 8px 14px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-size: 13px;
-    }
-    
-    /* Hamburger */
-    .mobile-menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 4px;
-        width: 25px;
-        cursor: pointer;
-    }
-    .mobile-menu-toggle span {
-        height: 3px;
-        background: #333;
-        transition: .3s ease;
-    }
-    
-    /* Mobile Nav */
-    .mobile-nav {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 80%;
-        max-width: 330px;
-        height: 100%;
-        background: #fff;
-        z-index: 10000;
-        transition: left .35s ease;
-    }
-    .mobile-nav.active { left: 0; }
-    
-    .mobile-nav__overlay {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0,0,0,.45);
-        opacity: 0; visibility: hidden;
-        transition: .35s ease;
-        z-index: 9999;
-    }
-    .mobile-nav__overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .mobile-nav__header {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-    }
-    .mobile-nav__close {
-        font-size: 32px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .mobile-nav__logo {
-        height: 60px;
-    }
-    
-    /* Mobile Menu List */
-    .mobile-nav__list { list-style: none; padding: 10px 0; }
-    .mobile-nav__list li { border-bottom: 1px solid #eee; }
-    .mobile-nav__list a {
-        display: block;
-        padding: 15px 20px;
-        text-decoration: none;
-        color: #333;
-    }
-    
-    /* Mobile Dropdown */
-    .mobile-nav__submenu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .3s ease;
-        background: #f7f7f7;
-    }
-    .mobile-nav__submenu a { padding-left: 35px; }
-    
-    .submenu-toggle i { transition: .3s ease; }
-    
-    /* Hide desktop menu on mobile */
-    @media (max-width: 1199px) {
-        .navbar__menu-wrapper,
-        .navbar__options .btn--primary { display: none; }
-        .mobile-menu-toggle { display: flex; }
-    }
-    
-    /* Small screens */
-    @media (max-width: 600px) {
-        .navbar-logo img { height: 170px; }
-        .mobile-nav { width: 100%; max-width: none; }
-    }
-    </style>
-    
-
-
-
 </head>
 
 <body>
@@ -1016,14 +860,17 @@
 
       <header class="header">
         <div class="container">
-            <nav class="navbar p-0 main-header__menu-box">
-    
-                <!-- Logo -->
-                <div class="navbar-logo">
-                    <a href="/">
-                        <img src="logo.png" alt="UNU-Trust Logo" width="200px" height="200px">
-                    </a>
-                </div>
+            <nav class="navbar main-header__menu-box" 
+            style="height:100px; display:flex; align-items:center; padding:0 10px;">
+       
+           <!-- Logo -->
+           <div class="navbar-logo" style="display:flex; align-items:center; height:100%;">
+               <a href="/" style="display:flex; align-items:center;">
+                   <img src="logo.png" 
+                        alt="UNU-Trust Logo" 
+                        style="height:60px; width:auto; object-fit:contain; display:block;">
+               </a>
+           </div>
     
                 <!-- Desktop Menu -->
                 <div class="navbar__menu-wrapper d-none d-xl-block">
