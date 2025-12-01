@@ -13,7 +13,7 @@
    <!-- #keywords -->
    <meta name="keywords" content="UNU-Trust, women empowerment, Kenya, digital inclusion, climate resilience, economic independence">
    <!-- #description -->
-   <meta name="description" content="UNU-Trust empowers women in Northern Kenya through digital inclusion, economic empowerment, and climate resilience programs">
+   <meta name="description" content="Improve livelihoods of individuals living in Arid and Semi-Arid regions in Kenya through sustainable development and empowerment.">
    <!-- google fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
