@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- ==== banner section start ==== -->
-<section class="banner-two pt-3">
+<section class="banner-two pt-0">
     <div class="banner-two__slider swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
