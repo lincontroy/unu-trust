@@ -2,12 +2,12 @@
 
 @section('content')
 <!-- ==== banner section start ==== -->
-<section class="banner-two">
+<section class="banner-two pt-3">
     <div class="banner-two__slider swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="banner-two__slider-single">
-                    <div class="banner-two__slider-bg" data-background="sme.png">
+                    <div class="banner-two__slider-bg" data-background="inov.png">
                         <!-- UNU-Trust banner image placeholder -->
                     </div>
                     <div class="container">
@@ -17,8 +17,8 @@
                                     <span class="sub-title"><i class="icon-donation"></i>Empowering Women in Northern Kenya</span>
                                     <h1>Transforming Poverty Into <span class="bottom-line">Prosperity</span> Through Innovation</h1>
                                     <div class="banner__content-cta cta">
-                                        <a href="about-us.html" aria-label="about us" title="about us" class="btn--tertiary">Our Strategy <i class="fa-solid fa-arrow-right"></i></a>
-                                        <a href="get-involved.html" aria-label="get involved" title="get involved" class="btn--primary">Partner With Us <i class="fa-solid fa-arrow-right"></i></a>
+                                        <a href="/solution" aria-label="about us" title="about us" class="btn--tertiary">Our Solution <i class="fa-solid fa-arrow-right"></i></a>
+                                        <a href="/contact" aria-label="get involved" title="get involved" class="btn--primary">Partner With Us <i class="fa-solid fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -35,11 +35,11 @@
                         <div class="row">
                             <div class="col-12 col-md-9 col-lg-7 col-xxl-6">
                                 <div class="banner-two__slider-content">
-                                    <span class="sub-title"><i class="icon-donation"></i>Empowering Women in Northern Kenya</span>
-                                    <h1>Transforming Poverty Into <span class="bottom-line">Prosperity</span> Through Innovation</h1>
+                                    <span class="sub-title"><i class="icon-donation"></i>Transforming Arid and Semi-Arid Communities</span>
+                                    <h1>Transforming Poverty Into <span class="bottom-line">Bridging exclusion gaps in equality</span> Through Rights accessibility</h1>
                                     <div class="banner__content-cta cta">
-                                        <a href="about-us.html" aria-label="about us" title="about us" class="btn--tertiary">Our Strategy <i class="fa-solid fa-arrow-right"></i></a>
-                                        <a href="get-involved.html" aria-label="get involved" title="get involved" class="btn--primary">Partner With Us <i class="fa-solid fa-arrow-right"></i></a>
+                                        <a href="/solution" aria-label="about us" title="about us" class="btn--tertiary">Our Strategy <i class="fa-solid fa-arrow-right"></i></a>
+                                        <a href="/contact" aria-label="get involved" title="get involved" class="btn--primary">Partner With Us <i class="fa-solid fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>

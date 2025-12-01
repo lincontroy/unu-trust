@@ -68,17 +68,19 @@
         /* Header - STICKY NAVBAR */
         .header {
             background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky !important;
-            top: 0 !important;
-            left: 0;
-            right: 0;
-            z-index: 1000 !important;
-            width: 100%;
+            height: auto; /* remove fixed height */
+            padding: 0px 0; /* minimal top/bottom padding */
         }
         
+        .header .container {
+            padding: 0 10px; /* minimal horizontal padding */
+        }
         .main-header__menu-box {
-            padding: 18px 0;
+            padding: 10px 0;
         }
         
         /* Navigation */
@@ -86,13 +88,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 150px;
+            gap: 20px;
         }
         
         /* Increased Logo Size */
         .navbar-logo img {
-            height: 85px;
+            height: 170px;
             max-width: 220px;
+            margin: -5px 0; /* Negative margin to compensate */
         }
         
         /* Reduced Menu Wrapper Width */
@@ -370,6 +373,15 @@
         .page-wrapper {
             min-height: 100vh;
         }
+
+        /* Increase desktop logo size */
+        @media (min-width: 1200px) {
+            .navbar-logo img {
+                height: 170px !important; /* Increased from 170px */
+                max-width: 250px; /* Increased from 220px */
+                margin: -5px 0; /* Negative margin to compensate */
+            }
+        }
         
         /* Responsive - FIXED HAMBURGER VISIBILITY */
         @media (max-width: 1199px) {
@@ -402,7 +414,7 @@
         
         @media (max-width: 768px) {
             .navbar-logo img {
-                height: 85px !important;
+                height: 170px !important;
                 max-width: 220px !important;
             }
             
@@ -421,7 +433,7 @@
 
         @media (max-width: 480px) {
             .navbar-logo img {
-                height: 70px !important;
+                height: 170px !important;
                 max-width: 180px !important;
             }
             
@@ -503,7 +515,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+            background: none !important;
             padding: 30px 25px 25px;
             color: white;
         }
@@ -838,78 +850,158 @@
 <!-- This overrides the old conflicting styles -->
 
 <style>
-    /* Override old cultural-stats styles that conflict with new custom stats */
-    .cultural-stats-wrapper .stat-number-custom {
-        font-size: 48px !important;
-        font-weight: 900 !important;
-        margin-bottom: 20px !important;
-        color: #932013 !important;
-        letter-spacing: -1.5px !important;
-        line-height: 1.2 !important;
-        display: block !important;
-        background: none !important;
-        -webkit-background-clip: unset !important;
-        -webkit-text-fill-color: unset !important;
-        background-clip: unset !important;
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        line-height: 1.6;
     }
+   
+    
 
-    .cultural-stats-wrapper .stat-label-custom {
-        font-size: 15px !important;
-        color: #444 !important;
-        line-height: 1.5 !important;
-        font-weight: 500 !important;
+    
+    .navbar-logo img {
+        height: 170px;
+        width: auto;
     }
+    
+    /* Desktop Menu */
+    .navbar__menu-wrapper { display: flex; }
 
-    .cultural-stats-wrapper .stat-icon-custom {
-        font-size: 56px !important;
-        color: #932013 !important;
-        margin-bottom: 20px !important;
+    .navbar__item a {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        padding: 5px 8px;
+        display: block;
     }
-
-    /* Ensure proper spacing in stat cards */
-    .cultural-stats-wrapper .stat-card-custom {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        min-height: 280px !important;
-        padding: 50px 35px !important;
+    
+    /* Dropdown */
+    .navbar__item--has-children { position: relative; }
+    .navbar__sub-menu {
+        position: absolute;
+        left: 0;
+        top: 110%;
+        background: #fff;
+        min-width: 160px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        opacity: 0; visibility: hidden;
+        transition: .3s ease;
     }
-
-    @media (max-width: 768px) {
-        .cultural-stats-wrapper .stat-card-custom {
-            min-height: 260px !important;
-            padding: 40px 30px !important;
-        }
-
-        .cultural-stats-wrapper .stat-number-custom {
-            font-size: 42px !important;
-        }
-
-        .cultural-stats-wrapper .stat-icon-custom {
-            font-size: 50px !important;
-        }
+    .navbar__item--has-children:hover .navbar__sub-menu {
+        opacity: 1; visibility: visible;
     }
-
-    @media (max-width: 480px) {
-        .cultural-stats-wrapper .stat-card-custom {
-            min-height: 240px !important;
-            padding: 35px 25px !important;
-        }
-
-        .cultural-stats-wrapper .stat-number-custom {
-            font-size: 36px !important;
-        }
-
-        .cultural-stats-wrapper .stat-icon-custom {
-            font-size: 44px !important;
-        }
-
-        .cultural-stats-wrapper .stat-label-custom {
-            font-size: 14px !important;
-        }
+    .navbar__sub-menu a {
+        padding: 10px 15px;
+        color: #333;
     }
-</style>
+    
+    /* Desktop Contact button */
+    .btn--primary {
+        background: #2a7de1;
+        color: #fff !important;
+        padding: 8px 14px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    
+    /* Hamburger */
+    .mobile-menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        width: 25px;
+        cursor: pointer;
+    }
+    .mobile-menu-toggle span {
+        height: 3px;
+        background: #333;
+        transition: .3s ease;
+    }
+    
+    /* Mobile Nav */
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 330px;
+        height: 100%;
+        background: #fff;
+        z-index: 10000;
+        transition: left .35s ease;
+    }
+    .mobile-nav.active { left: 0; }
+    
+    .mobile-nav__overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,.45);
+        opacity: 0; visibility: hidden;
+        transition: .35s ease;
+        z-index: 9999;
+    }
+    .mobile-nav__overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .mobile-nav__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .mobile-nav__close {
+        font-size: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .mobile-nav__logo {
+        height: 60px;
+    }
+    
+    /* Mobile Menu List */
+    .mobile-nav__list { list-style: none; padding: 10px 0; }
+    .mobile-nav__list li { border-bottom: 1px solid #eee; }
+    .mobile-nav__list a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: #333;
+    }
+    
+    /* Mobile Dropdown */
+    .mobile-nav__submenu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+        background: #f7f7f7;
+    }
+    .mobile-nav__submenu a { padding-left: 35px; }
+    
+    .submenu-toggle i { transition: .3s ease; }
+    
+    /* Hide desktop menu on mobile */
+    @media (max-width: 1199px) {
+        .navbar__menu-wrapper,
+        .navbar__options .btn--primary { display: none; }
+        .mobile-menu-toggle { display: flex; }
+    }
+    
+    /* Small screens */
+    @media (max-width: 600px) {
+        .navbar-logo img { height: 170px; }
+        .mobile-nav { width: 100%; max-width: none; }
+    }
+    </style>
+    
+
+
 
 </head>
 
@@ -922,164 +1014,76 @@
       <!-- ==== / preloader end ==== -->
       
 
-      <!-- ==== STICKY Header with Hamburger Menu ==== -->
-      <header class="header header-secondary">
+      <header class="header">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="main-header__menu-box">
-                        <nav class="navbar p-0">
-                            <div class="navbar-logo">
-                                <a href="">
-                                    <!-- Bigger logo with !important styles -->
-                                    <img src="logo.png" alt="UNU-Trust Logo" width="200" height="55" 
-                                         style="width: 200px !important; height: 85px !important; max-width: none !important;">
-                                </a>
-                            </div>
-                            <div class="navbar__menu-wrapper">
-                                <div class="navbar__menu d-none d-xl-block">
-                                    <ul class="navbar__list">
-                                        <li class="navbar__item">
-                                            <a href="/" style="color: white !important;">Home</a>
-                                        </li>
-                                        <li class="navbar__item">
-                                            <a href="/about" style="color: white !important;">About Us</a>
-                                        </li>
-                                        <li class="navbar__item">
-                                            <a href="/solution" style="color: white !important;">Our Solution</a>
-                                        </li>
-                                       
-                                        <li class="navbar__item navbar__item--has-children">
-                                            <a href="#" style="color: white !important;">Whats Happening Now <i class="fas fa-chevron-down"></i></a>
-                                            <ul class="navbar__sub-menu">
-                                                <li><a href="/whats_happening#campaigns">Campaigns</a></li>
-                                                <li><a href="/whats_happening#updates">Updates</a></li>
-                                            </ul>
-                                        </li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="navbar__options">
-                                <div class="navbar__mobile-options d-none d-xl-block">
-                                    <a href="/contact" class="btn--primary">Contact us <i class="fa-solid fa-arrow-right"></i></a>
-                                </div>
-                                <button class="mobile-menu-toggle d-flex d-xl-none">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                        </nav>
-                    </div>
+            <nav class="navbar p-0 main-header__menu-box">
+    
+                <!-- Logo -->
+                <div class="navbar-logo">
+                    <a href="/">
+                        <img src="logo.png" alt="UNU-Trust Logo" width="200px" height="200px">
+                    </a>
                 </div>
-            </div>
+    
+                <!-- Desktop Menu -->
+                <div class="navbar__menu-wrapper d-none d-xl-block">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a href="/">Home</a></li>
+                        <li class="navbar__item"><a href="/about">About Us</a></li>
+                        <li class="navbar__item"><a href="/solution">Our Solution</a></li>
+    
+                        <li class="navbar__item navbar__item--has-children">
+                            <a href="#">Whats Happening Now <i class="fas fa-chevron-down"></i></a>
+                            <ul class="navbar__sub-menu">
+                                <li><a href="/whats_happening#campaigns">Campaigns</a></li>
+                                <li><a href="/whats_happening#updates">Updates</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Desktop Button -->
+                <div class="navbar__options d-none d-xl-block">
+                    <a href="/contact" class="btn--primary">Contact us</a>
+                </div>
+    
+                <!-- Hamburger -->
+                <button class="mobile-menu-toggle d-flex d-xl-none">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
         </div>
-        
-        <!-- Mobile Menu -->
+    
+        <!-- Mobile Navigation -->
         <div class="mobile-nav">
-            <div class="mobile-nav__overlay"></div>
-            <div class="mobile-nav__content">
-                <div class="mobile-nav__header">
-                    <!-- Bigger logo in mobile menu too -->
-                    <img src="logo.png" alt="UNU-Trust Logo" width="220" height="70"
-                         style="width: 220px !important; height: 70px !important; max-width: none !important;">
-                    <button class="mobile-nav__close">&times;</button>
-                </div>
-                <ul class="mobile-nav__list">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About Us</a></li>
-                    <li><a href="/solution">Our Solution</a></li>
-                    
-                    
-                    <li class="mobile-nav__item--has-children">
-                        <a href="#">Whats Happening Now <i class="fas fa-chevron-down"></i></a>
-                        <ul class="navbar__sub-menu">
-                            <li><a href="/whats_happening#campaigns">Campaigns</a></li>
-                            <li><a href="/whats_happening#updates">Updates</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/contact" class="btn--primary">Contact us</a></li>
-                </ul>
+            <div class="mobile-nav__header">
+                <img src="logo.png" class="mobile-nav__logo" />
+                <button class="mobile-nav__close">&times;</button>
             </div>
+    
+            <ul class="mobile-nav__list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/solution">Our Solution</a></li>
+    
+                <li class="mobile-nav__item--has-children">
+                    <a href="#" class="submenu-toggle">Whats Happening Now 
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="mobile-nav__submenu">
+                        <li><a href="/whats_happening#campaigns">Campaigns</a></li>
+                        <li><a href="/whats_happening#updates">Updates</a></li>
+                    </ul>
+                </li>
+    
+                <li><a href="/contact" class="btn--primary">Contact us</a></li>
+            </ul>
         </div>
+    
+        <div class="mobile-nav__overlay"></div>
     </header>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu elements
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
-            const mobileNav = document.querySelector('.mobile-nav');
-            const mobileOverlay = document.querySelector('.mobile-nav__overlay');
-            const mobileClose = document.querySelector('.mobile-nav__close');
-            
-            // Toggle mobile menu
-            function toggleMobileMenu() {
-                mobileNav.classList.toggle('active');
-                mobileOverlay.classList.toggle('active');
-                document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-                
-                // Animate hamburger icon
-                const spans = mobileToggle.querySelectorAll('span');
-                if (mobileNav.classList.contains('active')) {
-                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                    spans[1].style.opacity = '0';
-                    spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-                } else {
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
-                }
-            }
-            
-            // Event listeners
-            mobileToggle.addEventListener('click', toggleMobileMenu);
-            mobileClose.addEventListener('click', toggleMobileMenu);
-            mobileOverlay.addEventListener('click', toggleMobileMenu);
-            
-            // Mobile dropdown functionality
-            const mobileDropdowns = document.querySelectorAll('.mobile-nav__item--has-children > a');
-            
-            mobileDropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const submenu = this.nextElementSibling;
-                    const icon = this.querySelector('i');
-                    
-                    // Close other open dropdowns
-                    document.querySelectorAll('.mobile-nav__submenu.active').forEach(menu => {
-                        if (menu !== submenu) {
-                            menu.classList.remove('active');
-                            menu.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    submenu.classList.toggle('active');
-                    icon.style.transform = submenu.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-                });
-            });
-            
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('.mobile-nav__list a[href]').forEach(link => {
-                link.addEventListener('click', function() {
-                    if (!this.parentElement.classList.contains('mobile-nav__item--has-children')) {
-                        toggleMobileMenu();
-                    }
-                });
-            });
-
-            // Optional: Add scroll effect to sticky header
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('.header');
-                if (window.scrollY > 100) {
-                    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-                } else {
-                    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-                }
-            });
-        });
-    </script>
+    
 
     <!-- Main Content Section -->
     @yield('content')
@@ -1092,7 +1096,7 @@
                 <!-- Organization Info -->
                 <div class="footer-column" data-aos="fade-up" data-aos-duration="800">
                     <div class="footer-logo">
-                        <img src="logo.png" alt="UNU-Trust Logo">
+                        <img src="logo.png" alt="UNU-Trust Logo" >
                     </div>
                     <div class="footer-content">
                         <p class="organization-description">
@@ -1231,7 +1235,7 @@
 }
 
 .footer-logo img {
-    height: 70px;
+    height: 170px;
     margin-bottom: 20px;
     filter: brightness(0) invert(1);
 }
@@ -1516,5 +1520,58 @@
 <script src="js/gsap.min.js"></script>
 <script src="js/template-settings.js"></script>
 <script src="js/custom.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    
+        const toggle = document.querySelector(".mobile-menu-toggle");
+        const nav = document.querySelector(".mobile-nav");
+        const overlay = document.querySelector(".mobile-nav__overlay");
+        const closeBtn = document.querySelector(".mobile-nav__close");
+    
+        const openMenu = () => {
+            nav.classList.add("active");
+            overlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+    
+            const s = toggle.querySelectorAll("span");
+            s[0].style.transform = "rotate(45deg) translate(5px,5px)";
+            s[1].style.opacity = "0";
+            s[2].style.transform = "rotate(-45deg) translate(6px,-6px)";
+        };
+    
+        const closeMenu = () => {
+            nav.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+    
+            const s = toggle.querySelectorAll("span");
+            s[0].style.transform = "";
+            s[1].style.opacity = "1";
+            s[2].style.transform = "";
+        };
+    
+        toggle.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", closeMenu);
+        overlay.addEventListener("click", closeMenu);
+    
+        // Mobile submenu
+        document.querySelectorAll(".submenu-toggle").forEach(btn => {
+            btn.addEventListener("click", e => {
+                e.preventDefault();
+    
+                const submenu = btn.nextElementSibling;
+                submenu.classList.toggle("active");
+    
+                btn.classList.toggle("active");
+            });
+        });
+    
+    });
+    </script>
+    
+    
+    
+
 </body>
 </html>

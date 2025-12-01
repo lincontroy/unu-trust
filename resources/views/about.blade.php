@@ -4,7 +4,7 @@
 
 
 <!-- ==== our work section start ==== -->
-<section id="our-work" class="about-mission pt-120 pb-120">
+<section id="our-work" class="about-mission pt-3 pb-120">
     <div class="container">
         <div class="row align-items-center gutter-40">
             <div class="col-12 col-lg-6">
