@@ -494,7 +494,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10 col-xl-8">
                 <div class="section__header text-center" data-aos="fade-up" data-aos-duration="1000">
-                    <span class="sub-title"><i class="fas fa-hands-helping"></i> Celebrating Cultural Heritage</span>
+                    <span class="sub-title"><i class="fas fa-hands-helping"></i> Celebrating Cultural </span>
                     <h2 class="title-animation">The <span>Beautiful Tapestry</span> of Northern Kenya</h2>
                     <p>Northern Kenya is home to vibrant cultures, each with unique traditions, attire, and artistry. Our women proudly wear their heritage through colorful shangas, intricate beadwork, and traditional adornments that tell stories of identity and resilience.</p>
                 </div>
@@ -581,129 +581,7 @@
 </section>
 
 <section>
-    <div class="cultural-stats-wrapper">
-        <div class="container">
-            <div class="stats-header-custom">
-                <h2>Our Impact in Numberwise</h2>
-                <p>Clear, verified, and measurable outcomes across all regions</p>
-            </div>
-    
-            <div class="stats-grid-custom">
-                <!-- First 4 cards - will fix specifically -->
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-users stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="11700">0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Individuals with enhanced business development skills</p>
-                    </div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-laptop-code stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="7500">0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Individuals reached through digital skilling in ASAL regions</p>
-                    </div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-home stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="46800">0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Household livelihoods impacted through job creation</p>
-                    </div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-store stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="9600">0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>SMEs established and supported through training</p>
-                    </div>
-                </div>
-    
-                <!-- Remaining cards -->
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-map-marker-alt stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="8">0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Counties reached through Trust initiatives</p>
-                    </div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-wifi stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="200000" data-prefix="$">$0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Finance mobilized to bridge digital exclusion</p>
-                    </div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-briefcase stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="375000" data-prefix="$">$0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Finance mobilized for employability programs</p>
-                    </div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-venus-mars stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="150000" data-prefix="$">$0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Finance mobilized for gender equality and rights</p>
-                    </div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-leaf stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="175000" data-prefix="$">$0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p>Finance mobilized for climate action</p>
-                    </div>
-                </div>
-    
-                
-            </div>
-        </div>
-    </div>
-    
+ 
     <style>
         /* RESET - Remove all conflicting styles */
         .stat-card-custom,
