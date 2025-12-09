@@ -768,7 +768,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
                 <div class="section__header text-center mb-60" data-aos="fade-up" data-aos-duration="1000">
-                    <h2 class="title-animation">Cross-Cutting Empowerment Themes</h2>
+                    <h2 class="title-animation">Cross-Cutting Themes</h2>
                     <p class="lead">Integral components that enable holistic approach to ending extreme poverty</p>
                 </div>
             </div>
