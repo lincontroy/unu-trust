@@ -611,7 +611,7 @@
                         <i class="fas fa-users stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="500000">0</div>
+                        <div class="stat-number-custom counter" data-target="11700+">0</div>
                     </div>
                     <div class="label-wrapper">
                         <p>Individuals with enhanced business development skills</p>
@@ -623,10 +623,10 @@
                         <i class="fas fa-laptop-code stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="500000">0</div>
+                        <div class="stat-number-custom counter" data-target="7500+">0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">Individuals reached through digital skilling in ASAL regions</p>
+                        <p>Individuals reached through digital skilling in ASAL regions</p>
                     </div>
                 </div>
     
@@ -635,10 +635,10 @@
                         <i class="fas fa-home stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="20000">0</div>
+                        <div class="stat-number-custom counter" data-target="46800+">0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">Household livelihoods impacted through job creation</p>
+                        <p>Household livelihoods impacted through job creation</p>
                     </div>
                 </div>
     
@@ -647,10 +647,10 @@
                         <i class="fas fa-store stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="50000">0</div>
+                        <div class="stat-number-custom counter" data-target="9600+">0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">SMEs established and supported through training</p>
+                        <p>SMEs established and supported through training</p>
                     </div>
                 </div>
     
@@ -660,10 +660,10 @@
                         <i class="fas fa-map-marker-alt stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="29">0</div>
+                        <div class="stat-number-custom counter" data-target="8">0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">Counties reached through Trust initiatives</p>
+                        <p>Counties reached through Trust initiatives</p>
                     </div>
                 </div>
     
@@ -672,10 +672,10 @@
                         <i class="fas fa-wifi stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                        <div class="stat-number-custom counter" data-target="200000" data-prefix="$">$0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">Finance mobilized to bridge digital exclusion</p>
+                        <p>Finance mobilized to bridge digital exclusion</p>
                     </div>
                 </div>
     
@@ -684,10 +684,10 @@
                         <i class="fas fa-briefcase stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                        <div class="stat-number-custom counter" data-target="375000" data-prefix="$">$0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">Finance mobilized for employability programs</p>
+                        <p>Finance mobilized for employability programs</p>
                     </div>
                 </div>
     
@@ -696,10 +696,10 @@
                         <i class="fas fa-venus-mars stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                        <div class="stat-number-custom counter" data-target="150000" data-prefix="$">$0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">Finance mobilized for gender equality initiatives</p>
+                        <p>Finance mobilized for gender equality and rights</p>
                     </div>
                 </div>
     
@@ -708,24 +708,14 @@
                         <i class="fas fa-leaf stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                        <div class="stat-number-custom counter" data-target="175000" data-prefix="$">$0</div>
                     </div>
                     <div class="label-wrapper">
-                        <p class="stat-label-custom">Finance mobilized for climate action</p>
+                        <p>Finance mobilized for climate action</p>
                     </div>
                 </div>
     
-                <div class="stat-card-custom">
-                    <div class="icon-wrapper">
-                        <i class="fas fa-balance-scale stat-icon-custom"></i>
-                    </div>
-                    <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
-                    </div>
-                    <div class="label-wrapper">
-                        <p class="stat-label-custom">Finance mobilized for policy & rights initiatives</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

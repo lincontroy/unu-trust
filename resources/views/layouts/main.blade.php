@@ -94,14 +94,7 @@
             gap: 12px;
            
         }
-        
-        /* Increased Logo Size */
-        .navbar-logo img {
-            height: 110px;
-            max-width: 220px;
-            margin: -5px 0; /* Negative margin to compensate */
-        }
-        
+       
         /* Reduced Menu Wrapper Width */
         .navbar__menu-wrapper {
             flex: 0 1 auto;
@@ -968,16 +961,18 @@
       <header class="header">
         <div class="container">
             <nav class="navbar main-header__menu-box" 
-            style="height:100px; display:flex; align-items:center; padding:0 10px;">
+            style="height:120px; display:flex; align-items:center; padding:0 10px;">
        
            <!-- Logo -->
            <div class="navbar-logo" style="display:flex; align-items:center; height:100%;">
-               <a href="/" style="display:flex; align-items:center;">
-                   <img src="logo.png" 
-                        alt="UNU-Trust Logo" 
-                        style="height:60px; width:auto; object-fit:contain; display:block;">
-               </a>
-           </div>
+            <a href="/" style="display:flex; align-items:center;">
+                <img src="logo.png"
+                     alt="UNU-Trust Logo"
+                     style="height:100px; width:auto; object-fit:contain; display:block;">
+            </a>
+        </div>
+        
+        
     
                 <!-- Desktop Menu -->
                 <div class="navbar__menu-wrapper d-none d-xl-block">
