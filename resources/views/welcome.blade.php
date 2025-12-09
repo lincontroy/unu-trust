@@ -595,7 +595,7 @@
                         <i class="fas fa-users stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="11700+">0</div>
+                        <div class="stat-number-custom counter" data-target="11700">0</div>
                     </div>
                     <div class="label-wrapper">
                         <p>Individuals with enhanced business development skills</p>
@@ -607,7 +607,7 @@
                         <i class="fas fa-laptop-code stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="7500+">0</div>
+                        <div class="stat-number-custom counter" data-target="7500">0</div>
                     </div>
                     <div class="label-wrapper">
                         <p>Individuals reached through digital skilling in ASAL regions</p>
@@ -619,7 +619,7 @@
                         <i class="fas fa-home stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="46800+">0</div>
+                        <div class="stat-number-custom counter" data-target="46800">0</div>
                     </div>
                     <div class="label-wrapper">
                         <p>Household livelihoods impacted through job creation</p>
@@ -631,7 +631,7 @@
                         <i class="fas fa-store stat-icon-custom"></i>
                     </div>
                     <div class="number-wrapper">
-                        <div class="stat-number-custom counter" data-target="9600+">0</div>
+                        <div class="stat-number-custom counter" data-target="9600">0</div>
                     </div>
                     <div class="label-wrapper">
                         <p>SMEs established and supported through training</p>
