@@ -962,7 +962,7 @@
         }
     </style>
     
-    <script>
+    {{-- <script>
     (function() {
         'use strict';
         
@@ -1049,7 +1049,7 @@
             setTimeout(startCounters, 500);
         });
     })();
-    </script>
+    </script> --}}
 </section>
 
 
