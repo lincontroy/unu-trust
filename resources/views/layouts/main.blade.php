@@ -965,8 +965,7 @@
        
             <div class="navbar-logo" style="display:flex; align-items:center; height:100%;">
                 <a href="/" style="display:flex; align-items:center;">
-                    <img src="logo.png"
-                        >
+                    <img src="logo.png">
                 </a>
             </div>
             
