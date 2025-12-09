@@ -847,6 +847,113 @@
         }
    </style>
 
+
+<style>
+    /* Wrapper */
+    .cultural-stats-wrapper {
+        background: #ffffff;
+        padding: 80px 20px;
+        margin: 60px 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        position: relative;
+    }
+    .cultural-stats-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #932013, #c72e1a);
+        border-radius: 20px 20px 0 0;
+    }
+    
+    /* Header */
+    .stats-header-custom { text-align: center; margin-bottom: 60px; }
+    .stats-header-custom h2 {
+        font-size: 44px;
+        font-weight: 800;
+        color: #1a1a1a;
+    }
+    .stats-header-custom p {
+        font-size: 19px;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    /* Grid */
+    .stats-grid-custom {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 32px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    /* Card */
+    .stat-card-custom {
+        background: #fff;
+        padding: 35px 28px;
+        border-radius: 16px;
+        border: 2px solid #e8e8e8;
+        transition: 0.35s;
+        min-height: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .stat-card-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px; /* FIX: prevents overlap */
+    }
+    
+    /* Icon */
+    .stat-icon-custom {
+        font-size: 48px;
+        color: #932013;
+    }
+    
+    /* Number */
+    .stat-number-custom {
+        font-size: 42px;
+        font-weight: 900;
+        color: #932013;
+        line-height: 1;
+    }
+    
+    /* Label — FIX APPLIED */
+    .stat-label-custom {
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: 500;
+        text-align: center;
+        padding: 0 5px;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+        hyphens: auto;
+        width: 100%;
+    }
+    
+   
+
+.stat-card-custom {
+    min-height: auto !important;
+    height: auto !important;
+}
+.stat-card-inner {
+    height: auto !important;
+}
+.stat-label-custom {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    hyphens: auto;
+}
+</style>
+
 </head>
 
 <body>
@@ -1082,7 +1189,7 @@
 }
 
 .footer-logo img {
-    height: 170px;
+    height: 270px;
     margin-bottom: 20px;
     filter: brightness(0) invert(1);
 }

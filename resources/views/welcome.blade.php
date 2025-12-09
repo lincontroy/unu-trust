@@ -1,6 +1,287 @@
 @extends('layouts.main')
 
 @section('content')
+<style>
+    /* RESET AND BASE */
+    .cultural-stats-wrapper * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Custom Stats Section */
+    .cultural-stats-wrapper {
+        background: #ffffff;
+        padding: 80px 20px;
+        margin: 60px 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        position: relative;
+    }
+
+    .cultural-stats-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #932013 0%, #c72e1a 100%);
+        border-radius: 20px 20px 0 0;
+    }
+
+    .stats-header-custom {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .stats-header-custom h2 {
+        font-size: 44px;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .stats-header-custom p {
+        font-size: 19px;
+        color: #666;
+        font-weight: 400;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .stats-grid-custom {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 32px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .stat-card-custom {
+        background: #ffffff;
+        padding: 35px 28px;
+        border-radius: 16px;
+        text-align: center;
+        border: 2px solid #e8e8e8;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: visible;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .stat-card-custom::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #932013 0%, #c72e1a 100%);
+        transform: scaleX(0);
+        transition: transform 0.35s ease;
+    }
+
+    .stat-card-custom:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 16px 36px rgba(147, 32, 19, 0.18);
+        border-color: #932013;
+    }
+
+    .stat-card-custom:hover::before {
+        transform: scaleX(1);
+    }
+    
+    /* ICON WRAPPER - Fixed height */
+    .icon-wrapper {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .stat-icon-custom {
+        font-size: 48px;
+        color: #932013;
+        transition: transform 0.35s ease;
+        display: block;
+        line-height: 1;
+        height: 48px;
+    }
+
+    .stat-card-custom:hover .stat-icon-custom {
+        transform: scale(1.15);
+    }
+    
+    /* NUMBER WRAPPER - Fixed height, prevents overlap */
+    .number-wrapper {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        flex-shrink: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .stat-number-custom {
+        font-size: 42px;
+        font-weight: 900;
+        color: #932013;
+        letter-spacing: -1.5px;
+        line-height: 1;
+        display: block;
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+    }
+    
+    /* LABEL WRAPPER - Takes remaining space, won't overlap */
+    .label-wrapper {
+        flex: 1;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px solid transparent;
+    }
+    
+    .stat-card-custom:hover .label-wrapper {
+        border-top-color: #f0f0f0;
+    }
+
+    .stat-label-custom {
+        font-size: 15px;
+        color: #444;
+        line-height: 1.4;
+        font-weight: 500;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    @media (max-width: 768px) {
+        .cultural-stats-wrapper {
+            padding: 60px 15px;
+            margin: 40px 0;
+        }
+
+        .stats-header-custom h2 {
+            font-size: 32px;
+        }
+
+        .stats-header-custom p {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid-custom {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .stat-card-custom {
+            padding: 30px 20px;
+            min-height: 280px;
+        }
+        
+        .icon-wrapper {
+            height: 55px;
+            margin-bottom: 5px;
+        }
+        
+        .number-wrapper {
+            height: 55px;
+            margin: 5px 0;
+        }
+        
+        .label-wrapper {
+            min-height: 75px;
+            padding-top: 5px;
+        }
+
+        .stat-number-custom {
+            font-size: 42px;
+            height: 45px;
+        }
+
+        .stat-icon-custom {
+            font-size: 50px;
+            height: 50px;
+        }
+
+        .stat-label-custom {
+            font-size: 15px;
+            line-height: 1.4;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .stat-card-custom {
+            padding: 25px 15px;
+            min-height: 260px;
+        }
+        
+        .icon-wrapper {
+            height: 50px;
+        }
+        
+        .number-wrapper {
+            height: 50px;
+        }
+        
+        .label-wrapper {
+            min-height: 70px;
+        }
+
+        .stat-number-custom {
+            font-size: 36px;
+            height: 40px;
+        }
+
+        .stat-icon-custom {
+            font-size: 44px;
+            height: 44px;
+        }
+
+        .stat-label-custom {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+    }
+    
+    /* For extra small screens */
+    @media (max-width: 360px) {
+        .stat-card-custom {
+            min-height: 270px;
+        }
+        
+        .stat-label-custom {
+            font-size: 13px;
+            line-height: 1.3;
+        }
+    }
+</style>
 <!-- ==== banner section start ==== -->
 <section class="banner-two pt-0" style="margin-top: 0px !important;">
     <div class="banner-two__slider swiper">
@@ -324,71 +605,141 @@
             </div>
     
             <div class="stats-grid-custom">
+                <!-- First 4 cards - will fix specifically -->
                 <div class="stat-card-custom">
-                    <i class="fas fa-users stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="500000">0</div>
-                    <div class="stat-label-custom">Individuals with enhanced business development skills</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-users stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="500000">0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p>Individuals with enhanced business development skills</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-laptop-code stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="500000">0</div>
-                    <div class="stat-label-custom">Individuals reached through digital skilling in ASAL regions</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-laptop-code stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="500000">0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Individuals reached through digital skilling in ASAL regions</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-home stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="20000">0</div>
-                    <div class="stat-label-custom">Household livelihoods impacted through job creation</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-home stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="20000">0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Household livelihoods impacted through job creation</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-store stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="50000">0</div>
-                    <div class="stat-label-custom">SMEs established and supported through training</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-store stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="50000">0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">SMEs established and supported through training</p>
+                    </div>
+                </div>
+    
+                <!-- Remaining cards -->
+                <div class="stat-card-custom">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-map-marker-alt stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="29">0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Counties reached through Trust initiatives</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-map-marker-alt stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="29">0</div>
-                    <div class="stat-label-custom">Counties reached through Trust initiatives</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-wifi stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Finance mobilized to bridge digital exclusion</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-wifi stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
-                    <div class="stat-label-custom">Finance mobilized to bridge digital exclusion</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-briefcase stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Finance mobilized for employability programs</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-briefcase stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
-                    <div class="stat-label-custom">Finance mobilized for employability programs</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-venus-mars stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Finance mobilized for gender equality initiatives</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-venus-mars stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
-                    <div class="stat-label-custom">Finance mobilized for gender equality initiatives</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-leaf stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Finance mobilized for climate action</p>
+                    </div>
                 </div>
     
                 <div class="stat-card-custom">
-                    <i class="fas fa-leaf stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
-                    <div class="stat-label-custom">Finance mobilized for climate action</div>
-                </div>
-    
-                <div class="stat-card-custom">
-                    <i class="fas fa-balance-scale stat-icon-custom"></i>
-                    <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
-                    <div class="stat-label-custom">Finance mobilized for policy & rights initiatives</div>
+                    <div class="icon-wrapper">
+                        <i class="fas fa-balance-scale stat-icon-custom"></i>
+                    </div>
+                    <div class="number-wrapper">
+                        <div class="stat-number-custom counter" data-target="5000000" data-prefix="$">$0</div>
+                    </div>
+                    <div class="label-wrapper">
+                        <p class="stat-label-custom">Finance mobilized for policy & rights initiatives</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
     <style>
-        /* Custom Stats Section - Reduced Height */
+        /* RESET - Remove all conflicting styles */
+        .stat-card-custom,
+        .stat-card-custom * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Wrapper */
         .cultural-stats-wrapper {
             background: #ffffff;
             padding: 80px 20px;
@@ -397,7 +748,7 @@
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             position: relative;
         }
-    
+        
         .cultural-stats-wrapper::before {
             content: '';
             position: absolute;
@@ -408,12 +759,13 @@
             background: linear-gradient(90deg, #932013 0%, #c72e1a 100%);
             border-radius: 20px 20px 0 0;
         }
-    
+        
+        /* Header */
         .stats-header-custom {
             text-align: center;
             margin-bottom: 60px;
         }
-    
+        
         .stats-header-custom h2 {
             font-size: 44px;
             font-weight: 800;
@@ -421,7 +773,7 @@
             margin-bottom: 16px;
             letter-spacing: -0.5px;
         }
-    
+        
         .stats-header-custom p {
             font-size: 19px;
             color: #666;
@@ -429,18 +781,20 @@
             max-width: 700px;
             margin: 0 auto;
         }
-    
+        
+        /* Grid */
         .stats-grid-custom {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             max-width: 1400px;
             margin: 0 auto;
         }
-    
+        
+        /* Card - FIXED STRUCTURE */
         .stat-card-custom {
             background: #ffffff;
-            padding: 35px 28px;
+            padding: 30px 25px;
             border-radius: 16px;
             text-align: center;
             border: 2px solid #e8e8e8;
@@ -450,9 +804,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 240px;
+            justify-content: space-between;
+            min-height: 280px;
+            height: 280px; /* Fixed height for consistency */
         }
-    
+        
         .stat-card-custom::before {
             content: '';
             position: absolute;
@@ -464,211 +820,282 @@
             transform: scaleX(0);
             transition: transform 0.35s ease;
         }
-    
+        
         .stat-card-custom:hover {
             transform: translateY(-10px);
             box-shadow: 0 16px 36px rgba(147, 32, 19, 0.18);
             border-color: #932013;
         }
-    
+        
         .stat-card-custom:hover::before {
             transform: scaleX(1);
         }
-    
+        
+        /* Icon wrapper - FIXED */
+        .icon-wrapper {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            flex-shrink: 0;
+            width: 100%;
+        }
+        
         .stat-icon-custom {
-            font-size: 48px;
-            margin-bottom: 16px;
+            font-size: 42px;
             color: #932013;
             transition: transform 0.35s ease;
             display: block;
-            flex-shrink: 0;
+            line-height: 1;
         }
-    
+        
         .stat-card-custom:hover .stat-icon-custom {
             transform: scale(1.15);
         }
-    
+        
+        /* Number wrapper - FIXED */
+        .number-wrapper {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            flex-shrink: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+        
         .stat-number-custom {
-            font-size: 42px;
+            font-size: 40px;
             font-weight: 900;
-            margin-bottom: 14px;
             color: #932013;
             letter-spacing: -1.5px;
-            line-height: 1.2;
-            flex-shrink: 0;
+            line-height: 1;
             display: block;
             width: 100%;
+            text-align: center;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
         }
-    
+        
+        /* Label wrapper - FIXED - Takes remaining space */
+        .label-wrapper {
+            flex: 1;
+            min-height: 80px;
+            max-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-top: 10px;
+            overflow: hidden;
+        }
+        
         .stat-label-custom {
             font-size: 15px;
             color: #444;
-            line-height: 1.5;
+            line-height: 1.4;
             font-weight: 500;
-            max-width: 100%;
-            margin: 0;
+            width: 100%;
             display: block;
             text-align: center;
+            padding: 0 5px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
-    
+        
+        /* Responsive */
         @media (max-width: 768px) {
             .cultural-stats-wrapper {
                 padding: 60px 15px;
                 margin: 40px 0;
             }
-    
+            
             .stats-header-custom h2 {
                 font-size: 32px;
             }
-    
+            
             .stats-header-custom p {
                 font-size: 16px;
                 margin-bottom: 40px;
             }
-    
+            
             .stats-grid-custom {
                 grid-template-columns: 1fr;
-                gap: 24px;
+                gap: 25px;
             }
-    
+            
             .stat-card-custom {
-                padding: 32px 26px;
-                min-height: 220px;
+                padding: 25px 20px;
+                min-height: 260px;
+                height: 260px;
             }
-    
-            .stat-number-custom {
-                font-size: 42px;
+            
+            .icon-wrapper {
+                height: 45px;
+                margin-bottom: 8px;
             }
-    
-            .stat-icon-custom {
-                font-size: 50px;
+            
+            .number-wrapper {
+                height: 55px;
+                margin: 8px 0;
             }
-        }
-    
-        @media (max-width: 480px) {
-            .stat-card-custom {
-                padding: 28px 22px;
-                min-height: 200px;
+            
+            .label-wrapper {
+                min-height: 75px;
+                max-height: 90px;
             }
-    
+            
             .stat-number-custom {
                 font-size: 36px;
+                height: 45px;
             }
-    
+            
             .stat-icon-custom {
-                font-size: 44px;
+                font-size: 38px;
             }
-    
+            
             .stat-label-custom {
                 font-size: 14px;
+                line-height: 1.4;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stat-card-custom {
+                padding: 20px 15px;
+                min-height: 240px;
+                height: 240px;
+            }
+            
+            .icon-wrapper {
+                height: 40px;
+            }
+            
+            .number-wrapper {
+                height: 50px;
+            }
+            
+            .label-wrapper {
+                min-height: 70px;
+                max-height: 85px;
+            }
+            
+            .stat-number-custom {
+                font-size: 32px;
+                height: 40px;
+            }
+            
+            .stat-icon-custom {
+                font-size: 34px;
+            }
+            
+            .stat-label-custom {
+                font-size: 13px;
+                line-height: 1.3;
             }
         }
     </style>
     
     <script>
-(function() {
-    'use strict';
-    
-    let countersInitialized = false;
-    
-    function animateCounter(element) {
-        if (!element || element.hasAttribute('data-animated')) return;
+    (function() {
+        'use strict';
         
-        element.setAttribute('data-animated', 'true');
-        const target = parseInt(element.getAttribute('data-target')) || 0;
-        const prefix = element.getAttribute('data-prefix') || '';
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-
-        const timer = setInterval(function() {
-            current += increment;
-            if (current >= target) {
-                element.textContent = prefix + target.toLocaleString();
-                clearInterval(timer);
-            } else {
-                element.textContent = prefix + Math.floor(current).toLocaleString();
-            }
-        }, 16);
-    }
-
-    function startCounters() {
-        if (countersInitialized) return;
+        let countersInitialized = false;
         
-        const statsGrid = document.querySelector('.stats-grid-custom');
-        if (!statsGrid) {
-            setTimeout(startCounters, 100);
-            return;
-        }
+        function animateCounter(element) {
+            if (!element || element.hasAttribute('data-animated')) return;
+            
+            element.setAttribute('data-animated', 'true');
+            const target = parseInt(element.getAttribute('data-target')) || 0;
+            const prefix = element.getAttribute('data-prefix') || '';
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
 
-        countersInitialized = true;
-
-        // Check if element is in viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-
-        // Try Intersection Observer first
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const counters = entry.target.querySelectorAll('.counter');
-                        counters.forEach(function(counter) {
-                            setTimeout(function() {
-                                animateCounter(counter);
-                            }, 150);
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { 
-                threshold: 0.1,
-                rootMargin: '50px'
-            });
-
-            observer.observe(statsGrid);
-        } else {
-            // Fallback for older browsers
-            function checkAndAnimate() {
-                if (isInViewport(statsGrid)) {
-                    const counters = statsGrid.querySelectorAll('.counter');
-                    counters.forEach(function(counter) {
-                        animateCounter(counter);
-                    });
-                    window.removeEventListener('scroll', checkAndAnimate);
+            const timer = setInterval(function() {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = prefix + target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = prefix + Math.floor(current).toLocaleString();
                 }
+            }, 16);
+        }
+
+        function startCounters() {
+            if (countersInitialized) return;
+            
+            const statsGrid = document.querySelector('.stats-grid-custom');
+            if (!statsGrid) {
+                setTimeout(startCounters, 100);
+                return;
             }
 
-            window.addEventListener('scroll', checkAndAnimate);
-            checkAndAnimate(); // Check immediately
+            countersInitialized = true;
+
+            // Try Intersection Observer first
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            const counters = entry.target.querySelectorAll('.counter');
+                            counters.forEach(function(counter) {
+                                setTimeout(function() {
+                                    animateCounter(counter);
+                                }, 150);
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { 
+                    threshold: 0.1,
+                    rootMargin: '50px'
+                });
+
+                observer.observe(statsGrid);
+            } else {
+                // Fallback for older browsers
+                function checkAndAnimate() {
+                    if (statsGrid.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                        const counters = statsGrid.querySelectorAll('.counter');
+                        counters.forEach(function(counter) {
+                            animateCounter(counter);
+                        });
+                        window.removeEventListener('scroll', checkAndAnimate);
+                    }
+                }
+
+                window.addEventListener('scroll', checkAndAnimate);
+                checkAndAnimate();
+            }
         }
-    }
 
-    // Multiple initialization points
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', startCounters);
-    } else {
-        startCounters();
-    }
+        // Initialize counters
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', startCounters);
+        } else {
+            startCounters();
+        }
 
-    // Backup initialization
-    window.addEventListener('load', function() {
-        setTimeout(startCounters, 500);
-    });
-
-    // Extra backup for lazy-loaded content
-    setTimeout(startCounters, 1000);
-    setTimeout(startCounters, 2000);
-})();
-</script>
+        // Backup initialization
+        window.addEventListener('load', function() {
+            setTimeout(startCounters, 500);
+        });
+    })();
+    </script>
 </section>
+
 
 <section class="help">
     <div class="container">
