@@ -109,21 +109,21 @@
                                 <i class="fas fa-comment-dots"></i>
                                 <div>
                                     <h6>Behavior Change Messaging</h6>
-                                    <p>Developing and disseminating key messages for positive behavior change in communities</p>
+                                    <p>Developing and Disseminating Key messages For Fositive Behavior Change In Communities</p>
                                 </div>
                             </div>
                             <div class="activity-item">
                                 <i class="fas fa-user-graduate"></i>
                                 <div>
                                     <h6>Capacity Building Sessions</h6>
-                                    <p>Conducting training and workshops to empower community members with essential skills</p>
+                                    <p>Conducting Training and Workshops to Empower Community Members With Essential Skills</p>
                                 </div>
                             </div>
                             <div class="activity-item">
                                 <i class="fas fa-handshake"></i>
                                 <div>
                                     <h6>Stakeholder Engagement</h6>
-                                    <p>Engaging government and civil society stakeholders to drive systemic change</p>
+                                    <p>Engaging Government and Civil Society Stakeholders to Drive Systemic Change</p>
                                 </div>
                             </div>
                         </div>
@@ -628,6 +628,7 @@
     line-height: 1.5;
     margin: 0;
     font-size: 0.95rem;
+    text-transform: none !important;  
 }
 
 /* Impact Stats */
