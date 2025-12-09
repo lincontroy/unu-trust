@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="detail-content">
                                         <h5>Email Address</h5>
-                                        <a href="mailto:info@unu-trust.org" class="email-link">info@unu-trust.org</a>
+                                        <a href="mailto:info@unu-trust.org" class="email-link" style="text-transform: none !important;">info@unu-trust.org</a>
                                         <span class="detail-note">Primary contact for all inquiries</span>
                                     </div>
                                 </div>

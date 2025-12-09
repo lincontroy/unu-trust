@@ -1110,7 +1110,7 @@
                             </div>
                             <div class="">
                                 <span class="contact-label">Email</span>
-                                <a href="mailto:info@unu-trust.org" class="">info@unu-trust.org</a>
+                                <a href="mailto:info@unu-trust.org" class="" style="text-transform: none !important;">info@unu-trust.org</a>
                             </div>
                         </div>
                         <div class="contact-item">
