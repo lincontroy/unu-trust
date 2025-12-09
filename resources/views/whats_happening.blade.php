@@ -153,7 +153,7 @@
                             <i class="fas fa-venus-mars"></i>
                             <div>
                                 <h5>Primary Focus</h5>
-                                <p>Eradication of Violence Against Women & Gender Equality</p>
+                                <p>Eradication of Violence Against Women</p>
                             </div>
                         </div>
                     </div>

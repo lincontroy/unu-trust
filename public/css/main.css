@@ -2717,8 +2717,8 @@ div {
       flex-wrap: wrap;
 }
 .header .navbar-logo img {
-  max-width: 100px;
-  height: 70px;
+  max-width: 200px;
+  height: 170px;
 }
 .header .navbar__menu {
   -webkit-box-flex: 1;

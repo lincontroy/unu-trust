@@ -374,7 +374,7 @@
         /* Increase desktop logo size */
         @media (min-width: 1200px) {
             .navbar-logo img {
-                height: 170px !important; /* Increased from 170px */
+                height: 250px !important; /* Increased from 170px */
                 max-width: 250px; /* Increased from 220px */
                 margin: -5px 0; /* Negative margin to compensate */
             }
@@ -430,8 +430,8 @@
 
         @media (max-width: 480px) {
             .navbar-logo img {
-                height: 170px !important;
-                max-width: 180px !important;
+                height: 230px !important;
+                max-width: 230px !important;
             }
             
             .mobile-nav__header {
@@ -961,16 +961,15 @@
       <header class="header">
         <div class="container">
             <nav class="navbar main-header__menu-box" 
-            style="height:120px; display:flex; align-items:center; padding:0 10px;">
+            style="height:150px; display:flex; align-items:center; padding:0 10px;">
        
-           <!-- Logo -->
-           <div class="navbar-logo" style="display:flex; align-items:center; height:100%;">
-            <a href="/" style="display:flex; align-items:center;">
-                <img src="logo.png"
-                     alt="UNU-Trust Logo"
-                     style="height:100px; width:auto; object-fit:contain; display:block;">
-            </a>
-        </div>
+            <div class="navbar-logo" style="display:flex; align-items:center; height:100%;">
+                <a href="/" style="display:flex; align-items:center;">
+                    <img src="logo.png"
+                        >
+                </a>
+            </div>
+            
         
         
     
@@ -1109,9 +1108,9 @@
                             <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="contact-details">
+                            <div class="">
                                 <span class="contact-label">Email</span>
-                                <a href="mailto:info@unu-trust.org" class="contact-value">info@unu-trust.org</a>
+                                <a href="mailto:info@unu-trust.org" class="">info@unu-trust.org</a>
                             </div>
                         </div>
                         <div class="contact-item">
