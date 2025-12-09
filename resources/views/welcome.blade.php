@@ -1069,18 +1069,14 @@
                             <li><i class="fa-solid fa-circle-check"></i> Establish self-sustaining digital-livelihood hubs</li>
                         </ul>
                     </div>
-                    <div class="help__content-cta cta">
-                        <a href="about-us.html" aria-label="more about us" title="about us" class="btn--primary">Our Full Strategy</a>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-12 col-lg-5 col-xxl-6 d-none d-lg-block">
                 <div class="help__thumb">
                     <div class="help__thumb-inner">
                         <!-- Impact infographic placeholder -->
-                        <div class="thumb-lg thumb" data-aos="fade-left" data-aos-duration="1000">
-                            <img src="images/impact-infographic.png" alt="UNU-Trust Impact Infographic">
-                        </div>
+                       
                     </div>
                 </div>
             </div>
