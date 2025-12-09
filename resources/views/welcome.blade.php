@@ -584,7 +584,7 @@
     <div class="cultural-stats-wrapper">
         <div class="container">
             <div class="stats-header-custom">
-                <h2>Our Impact in Numbers</h2>
+                <h2>Our Impact in Numberwise</h2>
                 <p>Clear, verified, and measurable outcomes across all regions</p>
             </div>
     
